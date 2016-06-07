@@ -3,10 +3,10 @@
 *Czy blokujKarte usunąć czy jakoś inaczej wywołać (StanKarta ->StanBlednyPin)
 *Czy settery w ogóle coś robią w tym kodzie
 
-
-*Czy robić listę kart
-*Czy robić "anuluj"
-*Czy robić GUI
-
-
-wypłacKwote (int kwota) ????
+1. przesłać kodPin przez Karta ameliaAsmus 
+wprowadzpin(Karta karta){
+ameliaAsmus.getKodPin().equals(pin);
+}
+2. wyplacKwote(int kwota) czy jakoś tak
+3. jezeli błędny pin to: Karta.ameliaAsmus = NULL;  usunąć kompletnie implementacje blokujkarte();
+4.
