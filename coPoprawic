@@ -1,0 +1,12 @@
+*Jak przesłać kartę z konkretnym Pinem do porównywania
+*Jak aktualizować stan pieniedzy w bankomacie
+*Czy blokujKarte usunąć czy jakoś inaczej wywołać (StanKarta ->StanBlednyPin)
+*Czy settery w ogóle coś robią w tym kodzie
+
+
+*Czy robić listę kart
+*Czy robić "anuluj"
+*Czy robić GUI
+
+
+wypłacKwote (int kwota) ????
