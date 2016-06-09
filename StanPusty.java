@@ -15,7 +15,7 @@ public class StanPusty implements Stan {
     }
 
     @Override
-    public void wprowadzPin(int kodPin) {
+    public void wprowadzPin(Karta karta) {
         System.out.println("Automat został zablokowany.");
     }
 
@@ -24,8 +24,4 @@ public class StanPusty implements Stan {
         System.out.println("Automat został zablokowany.");
     }
 
-    @Override
-    public void blokujKarte() {
-        System.out.println("Automat został zablokowany.");
-    }
 }

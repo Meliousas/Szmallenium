@@ -6,5 +6,8 @@ public class Karta {
 
     public Karta(int kodPin) {
         this.kodPin = kodPin;
+
     }
+
 }
+

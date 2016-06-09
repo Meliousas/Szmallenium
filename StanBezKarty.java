@@ -14,13 +14,11 @@ public class StanBezKarty implements Stan {
     }
 
 
-    public void wprowadzPin(int kodPin){
-        System.out.println("Przed wprowadzeniem PINu włóż kartę.");
+    public void wprowadzPin(Karta karta){
+        System.out.println("Przed wprowadzeniem kodu PIN włóż kartę.");
     }
     public void wyplac(){
         System.out.println("Operacja niedozwolona.");
     }
-    public void blokujKarte(){
-        System.out.println("Operacja niedozwolona.");
-    }
+
 }

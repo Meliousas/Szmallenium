@@ -5,7 +5,6 @@ public class Szmallenium {
 
     Stan stanBezKarty;
     Stan stanKarta;
-    Stan stanBlednyPin;
     Stan stanWyplata;
     Stan stanPusty;
 
@@ -15,7 +14,6 @@ public class Szmallenium {
     public Szmallenium(int dostepnyHajs) {
         stanBezKarty = new StanBezKarty(this);
         stanKarta = new StanKarta(this);
-        stanBlednyPin = new StanBlednyPin(this);
         stanWyplata = new StanWyplata(this);
         stanPusty = new StanPusty(this);
 
@@ -23,32 +21,33 @@ public class Szmallenium {
         if (dostepnyHajs > 0) {
             stan = stanBezKarty;
         }
-        ;
+
     }
 
     public void wlozKarte() {
         stan.wlozKarte();
     }
 
-    public void wprowadzPin(int kodPin) {
-        stan.wprowadzPin(kodPin);
+    public void wprowadzPin(Karta karta) {
+        stan.wprowadzPin(karta);
     }
 
     public void wyplac() {
         stan.wyplac();
     }
 
-    public void blokujKarte() {
-        stan.blokujKarte();
-    }
-
-    void wyplacKwote() {
+    void wyplacKwote(int kwota) {
+        hajs = hajs - kwota;
         System.out.println("Podana kwota została wypłacona.");
     }
 
     void oddajKarte() {
         System.out.println("Karta została zwrócona.");
     }
+
+    void blokujKarte(Karta karta) { System.out.println("Karta została zablokowana."); }
+
+    void ileZostaloHajsu() {System.out.println(getHajs());}  // pomocniczo żeby sprawdzić saldo bankomatu
 
 
 
@@ -80,13 +79,6 @@ public class Szmallenium {
         this.stanKarta = stanKarta;
     }
 
-    public Stan getStanBlednyPin(int kodPin) {
-        return stanBlednyPin;
-    }
-
-    public void setStanBlednyPin(Stan stanBlednyPin) {
-        this.stanBlednyPin = stanBlednyPin;
-    }
 
     public Stan getStanWyplata() {
         return stanWyplata;

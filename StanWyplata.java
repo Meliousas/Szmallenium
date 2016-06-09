@@ -16,7 +16,7 @@ public class StanWyplata implements Stan {
     }
 
     @Override
-    public void wprowadzPin(int kodPin) {
+    public void wprowadzPin(Karta karta) {
         System.out.println("PIN został już zweryfikowany.");
     }
 
@@ -29,22 +29,23 @@ public class StanWyplata implements Stan {
 
         if(szmallenium.getHajs() - kwota>=0)
         {
-            szmallenium.wyplacKwote();
+            szmallenium.wyplacKwote(kwota);
             szmallenium.oddajKarte();
             szmallenium.setStan(szmallenium.getStanBezKarty());
         }
         else if(szmallenium.getHajs() - kwota<0 && szmallenium.getHajs() != 0  ){
-            System.out.println("Dostępna gotówka to tylko: " + szmallenium.getHajs() +". Czy chcesz wypłacić podaną kwotę? TAK/NIE" );
+            System.out.println("Dostępna gotówka to tylko: " + szmallenium.getHajs() +". Czy chcesz wypłacić podaną kwotę? tak/nie" );
             String odpowiedz;
             Scanner odp = new Scanner(System.in);
             odpowiedz = odp.nextLine();
 
-            if(odpowiedz == "tak" || odpowiedz == "TAK" ){
+            if(odpowiedz.equals("tak")){
                 kwota=szmallenium.getHajs();
-                szmallenium.wyplacKwote();
+                szmallenium.wyplacKwote(kwota);
+                szmallenium.oddajKarte();
                 szmallenium.setStan(szmallenium.getStanPusty());
             }
-            if(odpowiedz == "nie" || odpowiedz == "NIE" ){
+            else if(odpowiedz.equals("nie")){
                 System.out.println("Zapraszamy później.");
                 szmallenium.oddajKarte();
                 szmallenium.setStan(szmallenium.getStanBezKarty());
@@ -57,9 +58,6 @@ public class StanWyplata implements Stan {
 
 
 
-    @Override
-    public void blokujKarte() {
-        System.out.println("Operacja niedozwolona.");
-    }
+
 
 }

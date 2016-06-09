@@ -15,25 +15,29 @@ public class StanKarta implements Stan {
     }
 
 
-    public void wprowadzPin(int kodPin) {
+    public void wprowadzPin(Karta karta) {
+
+        int i;
+        for(i=1;i<4;i++){
 
         int pin;
         System.out.println("Podaj kod PIN wprowadzonej karty.");
         Scanner zczytaj = new Scanner(System.in);
         pin = zczytaj.nextInt();
-        int i;
-        for(i=1;i<4;i++){
-        if (pin==kodPin){
+
+        if (karta.kodPin == pin){
             System.out.println("Podano poprawny kod PIN.");
             szmallenium.setStan(szmallenium.getStanWyplata());
             break;
         }
-        if(pin!=kodPin) {
+        if(karta.kodPin != pin) {
             System.out.println("Kod pin jest niepoprawny!");
             System.out.println("Liczba pozostałych prób:" + (3-i));
         }
-        if(pin!=kodPin && i==3){
-            szmallenium.setStan(szmallenium.getStanBlednyPin(kodPin));}
+        if(karta.kodPin != pin && i==3){
+            szmallenium.blokujKarte(karta);
+            szmallenium.oddajKarte();
+            szmallenium.setStan(szmallenium.getStanBezKarty());}
         }
     }
 
@@ -43,8 +47,6 @@ public class StanKarta implements Stan {
     }
 
 
-    public void blokujKarte() {
-        System.out.println("Operacja niedozwolona.");
-    }}
+    }
 
 

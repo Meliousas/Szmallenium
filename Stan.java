@@ -4,9 +4,9 @@
 public interface Stan {
 
     void wlozKarte();
-    void wprowadzPin(int kodPin);
+    void wprowadzPin(Karta karta);
     void wyplac();
-    void blokujKarte();
+
 
 
 }
