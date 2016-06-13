@@ -59,46 +59,30 @@ public class Szmallenium {
         return stanBezKarty;
     }
 
-    public void setStanBezKarty(Stan stanBezKarty) {
-        this.stanBezKarty = stanBezKarty;
-    }
+
 
     public int getHajs() {
         return hajs;
     }
 
-    public void setHajs(int hajs) {
-        this.hajs = hajs;
-    }
+
 
     public Stan getStanKarta() {
         return stanKarta;
     }
 
-    public void setStanKarta(Stan stanKarta) {
-        this.stanKarta = stanKarta;
-    }
 
 
     public Stan getStanWyplata() {
         return stanWyplata;
     }
 
-    public void setStanWyplata(Stan stanWyplata) {
-        this.stanWyplata = stanWyplata;
-    }
+
 
     public Stan getStanPusty() {
         return stanPusty;
     }
 
-    public void setStanPusty(Stan stanPusty) {
-        this.stanPusty = stanPusty;
-    }
-
-    public Stan getStan() {
-        return stan;
-    }
 
     public void setStan(Stan stan) {
         this.stan = stan;

@@ -4,18 +4,13 @@
 public class SzmalleniumTest {
 
    public static void main(String[] args){
-       Szmallenium szmallenium = new Szmallenium(1000);
+       Szmallenium szmallenium = new Szmallenium(1000000);
        Karta karta= new Karta(1111);
-
-       szmallenium.wlozKarte();
-       szmallenium.wlozKarte();
-       szmallenium.wprowadzPin(karta);
 
        szmallenium.wlozKarte();
        szmallenium.wprowadzPin(karta);
        szmallenium.wyplac();
-       szmallenium.ileZostaloHajsu(); // pomocniczo
-       szmallenium.wlozKarte();
+
 
 
 }

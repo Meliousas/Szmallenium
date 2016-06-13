@@ -36,8 +36,8 @@ public class StanKarta implements Stan {
         }
         if(karta.kodPin != pin && i==3){
             szmallenium.blokujKarte(karta);
-            szmallenium.oddajKarte();
-            szmallenium.setStan(szmallenium.getStanBezKarty());}
+            szmallenium.setStan(szmallenium.getStanBezKarty());
+        }
         }
     }
 
